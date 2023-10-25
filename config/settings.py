@@ -27,11 +27,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3rd party
     'rest_framework',
     'rest_framework_simplejwt',
     'djoser',
     'corsheaders',
+
+    # local
+    'blog'
 ]
+
+# AUTH_USER_MODEL
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES":

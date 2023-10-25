@@ -4,6 +4,10 @@ Djangoの環境を構築するためのリポジトリです。
 
 ## コマンド
 
+## Djangoのコマンド
+
+ python manage.py startapp [app_name]
+
 ## Git command
 
  git add .

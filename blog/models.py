@@ -8,6 +8,9 @@ from django.contrib.auth import get_user_model
 #ORM　ｰ>　テーブルとオブジェクトを1：1で結ぶ機能
 User= get_user_model()
 
+class Category(models.Model):
+  title = models.CharField(max_length=200)
+
 class Post(models.Model):
   id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
   title = models.CharField(max_length=200)
@@ -19,6 +22,13 @@ class Post(models.Model):
     User,
     on_delete = models.CASCADE
   )
-
+  category = models.ForeignKey(
+    Category,
+    on_delete=models.CASCADE,
+    null = True,
+    blank=True
+  )
   def __str__(self): 
     return self.title
+
+

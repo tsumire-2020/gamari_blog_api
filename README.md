@@ -30,7 +30,8 @@ python manage.py runserver
 
 python manage.py runserver 0.0.0.0:8000
 実行後
-http://localhost:8000/にアクセスする
+http://localhost:8000/
+にアクセスする
 
 ###　管理者ユーザーの作成
 python manage.py createsuperuser

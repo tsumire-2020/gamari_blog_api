@@ -31,3 +31,5 @@ class PostListAppView(APIView):
   #   serializer = PostSerializer(posts, many = True)
 
 #　テキストの内容はきれいだが汎用性が低いらしい
+
+# class CategoryListAPIView(APIView):

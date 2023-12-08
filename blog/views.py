@@ -26,8 +26,8 @@ class PostListAppView(APIView):
 
   # 作成API 記事作成
   # def post.create(self, request)
-  def create(self, request):
-    postData = Post.objects.all()
-    serializer = PostSerializer(posts, many = True)
+  # def create(self, request):
+  #   postData = Post.objects.all()
+  #   serializer = PostSerializer(posts, many = True)
 
 #　テキストの内容はきれいだが汎用性が低いらしい

@@ -1,7 +1,9 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from blog.models import Post
+from blog.models import Post, Category
 from blog.serializers import PostSerializer
+from rest_framework.generics import ListCreateAPIView
+from blog.serializers import CategorySerialozer
 
 # Create your views here.
 #MVC => MTV
@@ -31,5 +33,10 @@ class PostListAppView(APIView):
   #   serializer = PostSerializer(posts, many = True)
 
 #　テキストの内容はきれいだが汎用性が低いらしい
+
+class CategoryListView(ListCreateAPIView):
+  queryset = Category.objects.all()
+  serializer_class = CategorySerialozer
+
 
 # class CategoryListAPIView(APIView):
